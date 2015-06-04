@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="ionic">
+  <head>
+    <script src="../js/ionic.bundle.js"></script>
+    <meta charset="utf-8">
+    <title>填写赛事信息</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="../style/css/ionic.css" rel="stylesheet">
+    <link href="../style/css/com.css" rel="stylesheet">
+  </head>
+  <body>  
+   <ion-header-bar class="disable-user-behavior bar bar-header bar-ava">
+          <a class="button button-icon icon ion-chevron-left"></a>
+           <h1 class="title">填写赛事信息</h1>
+   </ion-header-bar>
+   <ion-content class="sroll-content ionic-sroll has-header">
+      <div class="gameNews">
+          <div class="list">
+            <label class="item item-input">
+               <span class="input-label">比赛时间</span>
+               <input type="text" placeholder="2015-05-19  17:00">
+            </label>
+          </div>
+          <div class="list">
+            <label class="item item-input">
+               <span class="input-label">主队</span>
+               <input type="text" placeholder="达拉斯小牛">
+            </label>
+            <label class="item item-input">
+               <span class="input-label">客队</span>
+               <input type="text" placeholder="芝加哥小牛">
+            </label>
+          </div>
+          <div class="list">
+            <label class="item item-input">
+               <span class="input-label">地点</span>
+               <input type="text" placeholder="上海资深体育馆">
+            </label>
+            <label class="item item-input">
+               <span class="input-label">场地</span>
+               <input type="text" placeholder="一号足球场">
+            </label>
+          </div>
+        <div class="list bookes">
+          <label class="item item-input">
+            <span class="input-label">Email</span>
+            <textarea placeholder="请各自队准备好拉拉队，自带纯净水，横幅"></textarea>
+          </label>
+        </div>
+        <div class="padding">
+          <button class="button button-full button-blue">创建比赛</button>
+        </div>
+    </div>
+  </ion-content>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+
+/*admin-login*/
+body, .ionic-body {background:#f6f6f6;font-family: "Arial","Microsoft YaHei","SimHei","简体",sans-serif;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,input, button, select, textarea,span{font-family: "Arial","Microsoft YaHei","SimHei","简体",sans-serif;}
+input, select, textarea{background: transparent!important;}
+/* .item,.padding{padding:0 10px;} */
+.hidden{display:none}
+.logo{margin:25px 0 1px;}
+.logo h3{text-align: center;font-size: 24px;color: #666;}
+.color6 {padding:0 10px;}
+.color6 span{color: #666;font-size: 16px;}
+.color6 input{color: #333;font-size: 16px;}
+.logo .icon:before{font-size: 40px;}
+.item input::-webkit-placeholder {color: #eee;font-size: 16px;}
+.change-bd{border-bottom: 1px solid #ebebeb;}
+.button{border-radius: 5px;}
+.button-blue,.button-blue.activated,.button-blue:hover{background-color: #006dd9;color: #fff;border:none;height: 22px;font-size: 16px;}
+.button.buttons-default2,.button.buttons-default2.activated,.button.buttons-default2:hover{background-color: #fff;border:1px solid #ebebeb;line-height: 22px;color: #333;font-size: 16px;margin:0;margin-top: -8px;}
+.waited{display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100%;
+  height: 44px;
+  border-width: 0;
+  border-style: solid;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #ebebeb;
+  bottom: 44px;display: block;
+}
+.popu{display: block;position: absolute;top:50%;left: 50%;width: 40%;min-height: 40px;background: rgba(0,0,0,0.5);border-radius: 5px;text-align: center;margin-left: -20%;margin-top: -20px;}
+.popu span{color: #fff;line-height: 40px;}
+/*add-avatar*/
+.bar-ava{background: #333;}
+.bar-ava .button.button-icon:before{font-size: 24px;}
+.bar-ava .title{color: #fff;text-align: center!important;}
+.bar-ava .button{color: #fff;}
+.color9 span{color: #999;}
+.color9 input{color: #333;}
+.logo .button-add{margin:0 auto;display: block;width:80px;height:80px;border-radius: 50%;padding:0;border:none;}
+.button-add img{width: 100%;}
+/*比赛积分*/
+.modify-score{width:80px;display:block;}
+.bar-matches{background:#292744;}
+.bar-matches .button.button-icon:before{font-size: 24px;color: #fff;}
+.bar .correct,.bar .correct.activated,.bar .correct:hover{background: transparent;border: none;color: #0078ff;font-size: 16px;}
+.gameNode{background:#292744;}
+.scale .col-10{color: #fff;font-weight: bold;font-size: 30px;margin-top:3%;text-align:center;line-height:35px;}
+.scores,.oppant{font-size: 28px;color: #333;width: 50px;height:50px;background: url(../img/score_bg.png) no-repeat;line-height: 50px;text-align: center;float: right;background-size: 100% 100%}
+.score-name{text-align: right;font-size: 14px;color: #999;font-weight: bold;float: right;display: block;width: 100%;line-height: 24px;}
+.oppant{float: left;}
+.oppant+.score-name{text-align: left;}
+.playerNum{padding: 10px 0!important;}
+.playerNum .col{min-height: 315px;}
+.team-lft{position: relative;height: 100%;}
+.team-lft .baller{height: 50px;width: 50px;border:1px solid rgba(255,255,255,0.2);border-radius: 50%;line-height: 50px;text-align: center;font-size: 24px;color: #fff;position: absolute;left: 50%;margin-left: -20px;top:0;}
+.team-lft .baller:nth-child(1){top:0;}
+.team-lft .baller:nth-child(2){top:65px;}
+.team-lft .baller:nth-child(3){top:130px;}
+.team-lft .baller:nth-child(4){top:195px;}
+.team-lft .baller:nth-child(5){top:255px;}
+.begin-game{background-color: #fff;height: auto;width: 100%;}
+.begin-game>.padding{width: 100%;}
+@media screen and (max-height:620px){
+  .begin-game{position: relative;bottom: 0;left: 0;}
+ }
+@media screen and (min-height:620px){
+  ion-content>.scroll{position: absolute;top: 0;bottom: 0;width: 100%;}
+  .begin-game{position: absolute;bottom: 0;left: 0;}
+}
+@media screen and (min-height:660px) and (max-height:730px){
+  .playerNum .col{min-height: 390px;}
+}
+@media screen and (min-height:730px){
+  .playerNum .col{min-height: 440px;}
+}
+.sTime{font-size: 20px;color: #333;padding: 5px 0;text-align: center;}
+.button-red{background-color: #d90000;line-height: 22px;color: #fff;font-size: 16px;}
+.button-orange{background-color: #d93600;line-height: 22px;color: #fff;font-size: 16px;}
+.cause{border-top: 1px solid rgba(255,255,255,0.2);}
+.case{line-height: 20px;display: inline-block;width: 76%;text-overflow:ellipsis;overflow: hidden;white-space: nowrap;color: #fff;font-size:12px;}
+.cause .button-clear{font-size: 12px;max-height: 20px;width: 23%;float: right;margin-top: -11px;color: #0078ff;}
+.cause button i{color: #0078ff;}
+/*点击11号*/
+.team-human{height:315px};
+.team-human .baller.select-man{border:none;font-size: 28px;}
+.team-human,.team-lft.col2{display:flex;-webkit-box-flex: 2;-webkit-flex: 2;-moz-box-flex: 2;-moz-flex: 2;-ms-flex: 2;flex: 2;}
+.team-human>div[class|=baller],.team-human .goalBall>a[class|=scoItm],.step2{display: none;} 
+.team-human .foulShot,.team-human .goalBall{position: relative;width: 100%}
+.scoItm,.attack{display: block;border:1px solid rgba(255,255,255,0.2);border-radius: 20px;line-height: 36px;font-size: 16px;color: #fff;width: 96%;text-decoration: none;text-align: center;position: absolute;left:0;display: none;}
+.team-human .foulShot .scoItm,.team-human .goalBall .attack,.team-human .step2{display: block;}
+.team-human .foulShot .scoItm:nth-child(1),.team-human .goalBall .attack:nth-child(1){top:0;}
+.team-human .foulShot .scoItm:nth-child(2),.team-human .goalBall .attack:nth-child(2){top:50px;}
+.team-human .foulShot .scoItm:nth-child(3),.team-human .goalBall .attack:nth-child(3){top:100px;}
+.team-human .foulShot .scoItm:nth-child(4),.team-human .goalBall .attack:nth-child(4){top:150px;}
+.team-human .foulShot .scoItm:nth-child(5),.team-human .goalBall .attack:nth-child(5){top:200px;}
+.team-human .foulShot .shotted{background-color: #fff;color: #333;}/*变白底黑字*/
+.team-human .foulShot:last-child a{left:5px;}
+/*罚球不中*/
+.team-human {display:flex}
+.team-human .goalBall .shotted i{margin-top: -2px;margin-left: 2px;opacity: 0}
+.team-human .goalBall .shotted.nxtPort{border:none;background-color: transparent;color: #fff;}
+.team-human .goalBall .shotted.nxtPort i{opacity: 1;}
+.team-human .goalBall .shotted.nxtPort .button-icon.icon:before{font-size:16px;color: #fff; }
+/*选择首发球员*/
+.lordTeam {padding: 10px 0;}
+.lordTeam h1{font-size: 16px;font-weight: bold;color: #333;display: inline-block;padding: 0 10px;}
+.lordTeam small{font-size:12px;color: #999;}
+.lesser{float: right;font-size: 12px;color: #f00;margin-right: 10px;}
+.lordhd .item{color: #333;font-size: 16px;}
+/*添加赛事信息*/
+.gameNews{padding-top: 30px;}
+.item{border-color: #ebebeb;border-width: 1px;}
+.bookes textarea{min-height: 50px;padding: 10px 20px 10px 10px;}
+.gameNews input,.gameNews  textarea,.ballName input{color: #333;font-size: 16px;line-height: 20px;}
+.gameNews span,.ballName span{color: #666;font-size: 16px;}
+.ballName {border-top: 1px solid #ebebeb;margin-top: -1px;}
+.ballName .item{border:1px solid #ebebeb;}
+.againAd{background-color: #fff;border-bottom: 1px solid #ebebeb;display: block;width: 100%;color: #006dd9;text-align: left;line-height: 46px}
+.againAd .ion-android-add:before{color: #006dd9;margin-right: 7px;}
+.label-contain{display: block;
+  padding-top: 2px;
+  padding-left: 0;
+  height: 34px;
+  color: #333;
+  width: 100%;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 34px; 
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 220px;
+  -moz-box-flex: 1;
+  -moz-flex: 1 0 220px;
+  -ms-flex: 1 0 220px;
+  flex: 1 0 220px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+    }
+/*赛事列表*/
+.race-List {padding-bottom: 10%;}
+.race-List .row + .row{margin:0;padding: 10px;}
+.matchMain,.Undata{background-color: #fff;padding: 10px;}
+.matchMain>.col{padding: 0;}
+.matchMain>.col img{display: block;width: 80px;height: 80px;border-radius: 50%;margin:0 auto 10px;}
+.matchMain>.col p,.matchMain span{font-size: 15px;color: #333;width: 100%;text-align: center;text-overflow:ellipsis;overflow: hidden;white-space: nowrap;  margin-bottom: 0;}
+.ratio>.col{font-size: 22px;color: #333;line-height: 56px;text-align: center;padding: 0;}
+.matchMain span{color: #238c00;display: block;}
+.endMain{background: transparent;}
+.endMain span,.Undata span{color: #d90000;}
+/*我的球队*/
+.myTeam .item-content{padding: 26px 16px 26px 16px;font-size: 16px;color: #333;font-weight: bold;}
+.myTeam .item .badge{right: 10px;top:24px;font-size: 14px;color: #999;font-weight: normal;}
+/*我的球员*/
+.myPlay{padding-left: 70px;position: relative;min-height: 80px;  display: -webkit-box;border-bottom: 1px solid #ebebeb;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;}
+.myPlay img{max-width: 60px;max-height: 60px;position: absolute;left: 16px;top: 16px;width: 100%;height: 100%;}
+.myPlay h2,.myPlay p{font-size: 16px;color: #333;line-height: 58px;text-align: center;}
+.myPlay span{font-size: 14px;color: #999;line-height: 58px;text-align: right;}
+/*统计数据*/
+.headtum{background: #fff;border-bottom: 1px solid #ebebeb;padding: 0;}
+.headtum .col{padding-bottom: 0;}
+.headtum .col a{line-height: 37px;width: 80%;text-align: center;border-bottom: 2px solid #fff;font-size: 16px;color: #333;display: block;text-decoration: none;margin:0 auto;}
+.headtum .col a.dataHd{color: #007cff;border-bottom-color: #007cff;}
+.recordData .row + .row{margin:10px 0;}
+.recordData .evntAll .row + .row{margin:0;}
+.groupes h5{font-size: 14px;color: #999;}
+.armyAll{border:1px solid #ebebeb;padding: 8px;margin-bottom: 10px;background-color: #fff;}
+.armyhd{font-size: 16px;color: #333;padding:0 5px;}
+.armyhd span{font-size: 12px;color: #999;}
+.armyhd label{float: right;font-size: 16px;color: #333;}
+.armybd{padding: 0;}
+.armybd p{margin-bottom: 0;}
+.armybd span{font-size: 12px;color: #999;}
+.evntAll{margin:10px 0;}
+.evntAll .col{font-size: 14px;color: #333;}
+.facted{background: #fff;}
+/*没网络*/
+.noInte{position: absolute;top: 50%;margin-top:129px;left:0;width: 100%;}
+.noInte img{width: 120px;height: 120px;display: block;margin:0 auto 10px;}
+.noInte span,.noInte a{font-size: 16px;color: #999;display: block;text-decoration: none;text-align: center;width: 100%;}
+.noInte a{font-size: 14px;}
+
+  .platform-android .action-sheet-backdrop.active {
+  background-color: rgba(0, 0, 0, 0.4); }
+.platform-android .action-sheet {
+    margin-left: 8px;
+  margin-right: 8px; }
+  .platform-android .action-sheet .action-sheet-title, .platform-android .action-sheet .button {
+     text-align: center; 
+     border-color: #d1d3d6; 
+     font-size: 21px; 
+     color: #007aff;  }
+  .platform-android .action-sheet .action-sheet-title {
+    font-size: 13px;
+    padding: 16px;
+    color: #8f8f8f; }
+  .platform-android .action-sheet .button.active, .platform-android .action-sheet .button.activated {
+    background: #e4e5e7; }
+.platform-android .action-sheet-group {
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background-color: #fafafa; }
+.platform-android .action-sheet-cancel {
+  display: block; }
+.platform-android .action-sheet-has-icons .button {
+  padding-left: 56px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

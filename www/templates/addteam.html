@@ -1,0 +1,27 @@
+<ion-view view-title="添加球队">
+  <ion-content>
+  <div class="logo">
+          <button class="button button-add">
+              <img src="../style/img/player.png">
+          </button>
+        <button class="button button-clear button-block">添加图片</button>
+        </div>
+        <div class="list">
+            <label class="item item-input">
+               <span class="input-label">球队名称</span>
+               <input type="text" ng-model="addteamData.teamname" maxlength="20" ng-disabled='{{addteamData.disabled}}'>
+            </label>
+          </div>
+      <div class="list">
+        <label class="item item-input" ng-repeat="player in storage.players" ng-model='storage.players'>
+          <span class="input-label">球员{{$index+1}}</span>
+          <input type="text" ng-readonly='true' ng-disabled='{{player.disabled}}' data-index='{{$index+1}}' ng-click='showActionSheet($event)' value='{{player.playerNumber+(player.playerNumber?"号 ":"")+player.playerName}}'>
+        </label>
+         <a href="javascript:void(0);" class="button againAd" ng-click='continueAdd()'><i class="ion-android-add"></i>继续添加球员</a>
+      </div>
+
+      <div class="padding">
+          <button class="button button-full button-blue" ng-click='confirm()'>确认添加</button>
+        </div>
+  </ion-content>
+</ion-view>

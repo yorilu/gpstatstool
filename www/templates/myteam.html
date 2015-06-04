@@ -1,0 +1,12 @@
+<ion-view view-title="我的球队">
+  <ion-content>
+     <div class="list myTeam">
+            <a href="javascript:void(0);" class="item item-complex" ng-repeat="team in teamlist" ng-click="selectTeam($index)">
+              <div class="item-content">
+                {{team.teamName}}
+                <span class="badge">{{team.num}}人</span>
+              </div>
+            </a>
+          </div>
+  </ion-content>
+</ion-view>

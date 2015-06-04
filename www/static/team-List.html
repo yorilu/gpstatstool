@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="ionic">
+  <head>
+    <script src="../js/ionic.bundle.js"></script>
+    <meta charset="utf-8">
+    <title>赛事列表</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="../style/css/ionic.css" rel="stylesheet">
+    <link href="../style/css/com.css" rel="stylesheet">
+  </head>
+  <body>
+  <ion-header-bar class="disable-user-behavior bar bar-header bar-ava">
+          <h3 class="title">赛事列表</h3> 
+          <a class="button correct">添加赛事</a>
+   </ion-header-bar>
+  <ion-content class="sroll-content ionic-sroll">
+      <div class="race-List">
+            <div class="row matchMain">
+              <div class="col col-33">
+                <img src="../style/img/demo_03.jpg"/>
+                <p>虹口足球队</p>
+              </div>
+              <div class="col">
+                <div class="row ratio">
+                  <div class="col">156</div>
+                  <div class="col col-10">:</div>
+                  <div class="col">103</div>
+                </div>
+                <span>正在比赛</span>
+              </div>
+              <div class="col col-33">
+                <img src="../style/img/demo_05.jpg"/>
+                <p>虹口足球队</p>
+              </div>
+            </div>
+          <!--end-->
+           <div class="row matchMain endMain">
+              <div class="col col-33">
+                <img src="../style/img/demo_09.jpg"/>
+                <p>虹口足球队</p>
+              </div>
+              <div class="col">
+                <div class="row ratio">
+                  <div class="col">56</div>
+                  <div class="col col-10">:</div>
+                  <div class="col">93</div>
+                </div>
+                <span>已结束</span>
+              </div>
+              <div class="col col-33">
+                <img src="../style/img/demo_11.jpg"/>
+                <p>虹口足球队</p>
+              </div>
+            </div>
+             <!--data-unload-->
+            <div class="row matchMain Undata">
+              <div class="col col-33">
+                <img src="../style/img/demo_11.jpg"/>
+                <p>虹口足球队</p>
+              </div>
+              <div class="col">
+                <div class="row ratio">
+                  <div class="col">56</div>
+                  <div class="col col-10">:</div>
+                  <div class="col">93</div>
+                </div>
+                <span class="state">已结束</span>
+                <span class="state">数据未上传</span>
+              </div>
+              <div class="col col-33">
+                <img src="../style/img/demo_05.jpg"/>
+                <p>虹口足球队</p>
+              </div>
+            </div>
+      </div>
+  </ion-content>
+  </body>
+</html>

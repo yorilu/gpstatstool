@@ -1,0 +1,32 @@
+<ion-view view-title="赛事列表">
+    <ion-nav-buttons side="right">
+        <a href="javascript:void(0);" class="button correct" ng-click='showActionSheet()'>添加赛事</a>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+            <div class="race-List">
+                <div class="row matchMain" ng-repeat="match in matchList track by match.id "
+                     ng-click="goNextPage('{{match.id}}',{{match.status}},{{match.uploadFlag}})" ng-class="{endMain:match.status == 2 }">
+                    <div class="col col-33">
+                        <img ng-src="../style/img/teamlogo/{{match.homeLogo}}.jpg"/>
+                        <p>{{match.homeTeam}}</p>
+                    </div>
+                    <div class="col">
+                        <div class="row ratio">
+                            <div class="col">{{match.teamAScore}}</div>
+                            <div class="col col-10">:</div>
+                            <div class="col">{{match.teamBScore}}</div>
+                        </div>
+                        <span>{{convertStatus(match.status)}}</span>
+                        <span class="state">{{convertUploadFlag(match.status,match.uploadFlag)}}</span>
+                    </div>
+                    <div class="col col-33">
+                        <img ng-src="../style/img/teamlogo/{{match.guestLogo}}.jpg"/>
+                        <p>{{match.guestTeam}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,72 @@
+<ion-view style="z-index:999;position:absolute;">
+  <ion-content class="sroll-content ionic-sroll" style="top:0;">
+    <ion-header-bar class="disable-user-behavior bar bar-header bar-matches" style="position:static;">
+          <a class="button button-icon icon ion-chevron-left" ng-click="$ionicGoBack()"></a>
+          <input class="button correct modify-score" type="text" id='J_Scroller' value="纠正比分">
+    </ion-header-bar>
+     <section class="gameNode">
+        <div class="row scale">
+          <div class="col">
+            <span class="scores">{{leftScore}}</span>
+            <span class="score-name">{{teamData.left.teamName}}</span>
+          </div>
+          <div class="col col-10">:</div>
+          <div class="col">
+            <span class="oppant">{{rightScore}}</span>
+            <span class="score-name">{{teamData.right.teamName}}</span>
+          </div>
+        </div>   
+        <!--main--> 
+        <div class="row playerNum clearfix">
+          <div class="col team-lft" ng-show="showLeftTeam">
+            <div class="baller J_Player" data-left="1" data-name="{{v.name}}" data-id="{{v.playerId}}" data-no="{{k}}" ng-repeat="(k,v) in  teamData.left.member" ng-click="playerClicked($event)">{{k}}</div>
+          </div>
+          <div class="col team-lft" ng-show="showLeftTeam && showRightTeam"></div>
+          <div class="col team-lft col2" ng-show="((showLeftTeam && !showRightTeam) ||(!showLeftTeam && showRightTeam)) &&!showFirstSetp&&!showSecSetp"></div>
+          <!--<div class="col team-lft" ng-show="((showLeftTeam && !showRightTeam) || (!showLeftTeam && showRightTeam))  && !showFirstSetp && !showSecSetp">-->
+          <div class="col team-lft team-human" ng-show="showFirstSetp" ng-click="stepOneClicked($event)">
+            <div class="col foulShot">
+                <a href="javascript:" class="J_Event scoItm" data-event=0>罚球命中</a>
+                <a href="javascript:" class="J_Event scoItm" data-event=1>2分命中</a>
+                <a href="javascript:" class="J_Event scoItm" data-event=2>3分命中</a>
+                <a href="javascript:" class="J_Event scoItm" data-event=3>抢断</a>
+                <a href="javascript:" class="J_Event scoItm" data-event=4>失误</a>
+            </div>           
+            <div class="col foulShot">
+                <a href="javascript:" class="J_Event scoItm" data-event=5>罚球不中</a>
+                <a href="javascript:" class="J_Event scoItm" data-event=6>2分不中</a>
+                <a href="javascript:" class="J_Event scoItm" data-event=7>3分不中</a>
+                <a href="javascript:" class="J_Event scoItm" data-event=8>犯规</a>
+            </div>
+          </div>
+          <div class="col team-lft team-human" ng-show="showSecSetp" ng-click="stepTwoClicked($event)">
+            <div class="row">
+              <div class="col foulShot goalBall">
+                <a href="javascript:" class="scoItm shotted nxtPort">{{stepTwoData.left.name}}<i class="button button-icon icon ion-chevron-right"></i></a>
+              </div>           
+              <div class="col foulShot goalBall">
+                <a href="javascript:" class="attack J_Event" data-event="{{item.event}}" ng-repeat="item in stepTwoData.right">{{item.name}}</a>
+              </div>
+            </div>           
+          </div>
+          <div class="col team-lft" ng-show="showRightTeam">
+            <div class="baller J_Player" data-name="{{v.name}}" data-id="{{v.playerId}}" data-no="{{k}}" ng-repeat="(k,v) in teamData.right.member" ng-click="playerClicked($event)">{{k}}</div>
+          </div>
+        </div>     
+        <div class="col cause" ng-show="eventStr">
+          <span class="case">{{eventStr}}</span>
+          <button class="button button-clear" ng-click="cancelEvent()"><i class="icon ion-reply"></i>撤销事件</button>
+        </div>
+      <!--mainEnd--> 
+      </section>
+      <footer class="bar bar-footer begin-game">    
+        <div class="padding">
+        <div class="sTime J_Timer">00:00:00</div>
+        <button class="button button-full button-red" ng-click="toggleTimer()">{{timerStr}}</button>
+        </div>
+      </footer> 
+  </ion-content>
+</ion-view>
+  
+
+

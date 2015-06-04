@@ -1,0 +1,25 @@
+<ion-view view-title="添加球员">
+  <ion-content>
+<div class="logo">
+          <button class="button button-add">
+              <img src="../style/img/player.png">
+          </button>
+        <button class="button button-clear button-block">添加球员</button>
+        </div>
+       <div class="list">
+            <div class="item color6">
+              <label class="item-input change-bd">
+                <span class="input-label">球员号码：</span>
+                <input type="tel" maxlength="2" ng-model='data.number'>
+              </label>
+             <label class="item-input">
+                <span class="input-label">球员名称：</span>
+                <input type="text" maxlength="20" ng-model='data.name'>
+              </label>
+            </div>
+          </div>
+          <div class="padding">
+              <button class="button button-full button-blue" ng-click="confirm()">确认添加</button>
+          </div>
+  </ion-content>
+</ion-view>

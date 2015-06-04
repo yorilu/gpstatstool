@@ -1,0 +1,48 @@
+<ion-view view-title="填写赛事信息">
+  <ion-content>
+<div class="list">
+     
+      <div class="gameNews">
+          <div class="list">
+            <label class="item item-input">
+               <span class="input-label">赛事类型</span>
+               <input type="text" ng-readonly='true' ng-click='showTypeSheet($event)'>
+            </label>
+          </div>
+          <div class="list">
+            <label class="item item-input">
+               <span class="input-label">比赛时间</span>
+               <input type="text" id='txt_datetime'>
+            </label>
+          </div>
+          <div class="list">
+            <label class="item item-input">
+               <span class="input-label">主队</span><input type="text" ng-readonly='true' data-type='master' ng-model='storage.masterTeam.teamName' id='txt_masterTeam' ng-click='showTeamSheet($event)'>
+            </label>
+            <label class="item item-input">
+               <span class="input-label">客队</span>
+               <input type="text" ng-readonly='true' data-type='guest' ng-model='storage.guestTeam.teamName' ng-click='showTeamSheet($event)' id='txt_guestTeam'>
+            </label>
+          </div>
+          <div class="list">
+            <label class="item item-input">
+               <span class="input-label">地点</span>
+               <input type="text" id='txt_location'>
+            </label>
+            <label class="item item-input">
+               <span class="input-label">场地</span>
+               <input type="text" id='txt_court'>
+            </label>
+          </div>
+        <div class="list bookes">
+          <label class="item item-input">
+            <span class="input-label" maxlength="120">备注</span>
+            <textarea ></textarea>
+          </label>
+        </div>
+        <div class="padding">
+          <button class="button button-full button-blue" ng-click="create()">创建比赛</button>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+<ion-view view-title="我的球员">
+  <ion-content>
+<div class="list">
+         <div class="item myPlay" ng-repeat="player in playerlist" ng-click="selectPlayer($index)" >
+          <img src="../style/img/demo_03.jpg">
+          <h2 class="col">{{player.playerName}}</h2>
+          <p class="col">{{player.playerNumber}}号</p>
+          <span class="col">{{player.teamName}}</span>
+        </div>
+      </div>
+  </ion-content>
+</ion-view>

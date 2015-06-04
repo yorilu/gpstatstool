@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="ionic">
+  <head>
+    <script src="../js/ionic.bundle.js"></script>
+    <meta charset="utf-8">
+    <title>赛事组织-比赛积分</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="../style/css/ionic.css" rel="stylesheet">
+    <link href="../style/css/com.css" rel="stylesheet">
+  </head>
+  <body>  
+   <ion-header-bar class="disable-user-behavior bar bar-header bar-matches">
+          <a class="button button-icon icon ion-chevron-left"></a>
+          <a class="button correct">纠正比分</a>
+   </ion-header-bar>
+    <ion-content class="sroll-content ionic-sroll has-header">
+     <section class="gameNode">
+        <div class="row scale">
+          <div class="col">
+            <span class="scores">57</span>
+            <span class="score-name">花园坊业余队</span>
+          </div>
+          <div class="col col-10">︰</div>
+          <div class="col">
+            <span class="oppant">94</span>
+            <span class="score-name">虹口梦之队</span>
+          </div>
+        </div>
+        <!--模拟-->
+      <div class="row playerNum clearfix">
+        <div class="col team-lft team-human col-25">
+              <div class="baller select-man">11</div>
+              <div class="baller">03</div>
+              <div class="baller">07</div>
+              <div class="baller">12</div>
+              <div class="baller">06</div>
+          </div>
+         <div class="col team-lft team-human">
+          <div class="baller">11</div>
+          <div class="baller">03</div>
+          <div class="baller">07</div>
+          <div class="baller">12</div>
+          <div class="baller">06</div> 
+          <div class="row">
+            <div class="col foulShot goalBall">
+                <a href="javascript:" class="scoItm shotted nxtPort">罚球命中<i class="button button-icon icon ion-chevron-right"></i></a>
+                <a href="javascript:" class="scoItm">2分命中</a>
+                <a href="javascript:" class="scoItm">3分命中</a>
+                <a href="javascript:" class="scoItm">抢断</a>
+                <a href="javascript:" class="scoItm">失误</a>
+            </div>           
+            <div class="col foulShot goalBall">
+                <a href="javascript:" class="attack">进攻篮板</a>
+                <a href="javascript:" class="attack">防守篮板</a>
+                <a href="javascript:" class="attack">球队篮板</a>
+                <a href="javascript:" class="attack">无篮板</a>
+            </div>
+          </div>           
+        </div>
+      </div>     
+      <div class="col cause">
+        <span class="case">上海梦之队11号罚球不进，10号抢到篮板</span>
+        <button class="button button-clear"><i class="icon ion-reply"></i>撤销事件</button>
+      </div>
+     </section>
+          <div class="padding begin-game">
+              <div class="sTime">00:00:00</div>
+              <button class="button button-full button-red">暂停比赛</button>
+          </div>
+          <div class="padding begin-game">
+              <div class="sTime">00:00:00</div>
+              <button class="button button-full button-blue">开始比赛</button>
+          </div>
+          <div class="padding begin-game">
+              <div class="sTime">00:00:00</div>
+              <button class="button button-full button-orange">暂停比赛</button>
+          </div>
+</ion-content>
+  </body>
+</html>

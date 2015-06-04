@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="ionic">
+  <head>
+    <script src="../js/ionic.bundle.js"></script>
+    <meta charset="utf-8">
+    <title>login</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="../style/css/ionic.css" rel="stylesheet">
+    <link href="../style/css/com.css" rel="stylesheet">
+  </head>
+  <body>
+    <ion-content class="scroll-content ionic-scroll">
+          <div class="logo">
+            <h3 class="title">赛事统计</h3>          
+          </div>
+          <div class="list">
+            <div class="item color6">
+              <label class="item-input change-bd">
+                <span class="input-label">账号：</span>
+                <input type="text" placeholder="zhihuiyundongchang">
+              </label>
+             <label class="item-input">
+                <span class="input-label">密码：</span>
+                <input type="password" placeholder="******">
+              </label>
+            </div>
+          </div>
+          <div class="padding">
+              <button class="button button-full button-blue">登陆</button>
+          </div>
+    </ion-content>
+     <!--popup-->
+     <span class="popu">
+       <span>请输入账号</span>
+     </span>
+    <span class="popu">
+       <span>请输入密码</span>
+     </span>
+    <span class="popu">
+       <span>账号或密码不正确</span>
+     </span>
+    <span class="popu">
+       <span>您的账号已停用</span>
+     </span>
+    <div class="waited">
+        <button class="button button-full buttons-default2">稍后登陆</button>
+    </div>
+  </body>
+</html>

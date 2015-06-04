@@ -1,0 +1,141 @@
+
+<ion-view view-title="赛事统计">
+    <ion-content class="sroll-content ionic-sroll has-header">
+        <div class="bar-ava">
+            <div class="row scale">
+                <div class="col">
+                    <span class="scores">{{match.teamAScore}}</span>
+                    <span class="score-name">{{match.teamAName}}</span>
+                </div>
+                <div class="col col-10">︰</div>
+                <div class="col">
+                    <span class="oppant">{{match.teamBScore}}</span>
+                    <span class="score-name">{{match.teamBName}}</span>
+                </div>
+            </div>
+        </div>
+        <!--数据开始-->
+        <div class="recordData">
+            <div class="row headtum"  ng-click="toggleTab($event)">
+                <div class="col"><a id="stat" href="javascript:" ng-class="{dataHd:showStatFlag}">统计</a></div>
+                <div class="col"><a id="event" href="javascript:" ng-class="{dataHd:!showStatFlag}">事件</a></div>
+            </div>
+            <div class="queue">
+                <!--data-->
+                <div class="row groupes" ng-show="showStatFlag">
+                    <div class="col">
+                        <h5>{{match.teamAName}}</h5>
+                        <div class="armyAll" ng-repeat="player in match.teamAPlayers">
+                            <div class="armyhd">{{player.playerName}}<span>{{player.isFirst?'(首发)':''}}</span><label>{{player.playerNumber}}</label></div>
+                            <div class="row armybd">
+                                <div class="col">
+                                    <p>
+                                        <span>得分:</span>
+                                        <span>{{player.score}}</span>
+                                    </p>
+                                    <p>
+                                        <span>助攻:</span>
+                                        <span>{{player.assist}}</span>
+                                    </p>
+                                    <p>
+                                        <span>犯规:</span>
+                                        <span>{{player.foul}}</span>
+                                    </p>
+                                    <p>
+                                        <span>二分:</span>
+                                        <span>{{player.twoPointShotHit}}-{{player.twoPointShotHit+player.twoPointShotMiss}}</span>
+                                    </p>
+                                    <p>
+                                        <span>罚球:</span>
+                                        <span>{{player.freeThrowShotHit}}-{{player.freeThrowShotHit+player.freeThrowShotMiss}}</span>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        <span>篮板:</span>
+                                        <span>{{player.backboard}}</span>
+                                    </p>
+                                    <p>
+                                        <span>抢断:</span>
+                                        <span>{{player.steal}}</span>
+                                    </p>
+                                    <p>
+                                        <span>失误:</span>
+                                        <span>{{player.turnover}}</span>
+                                    </p>
+                                    <p>
+                                        <span>三分:</span>
+                                        <span>{{player.threePointShotHit}}-{{player.threePointShotHit+player.threePointShotMiss}}</span>
+                                    </p>
+                                    <p>
+                                        <span>效率:</span>
+                                        <span>{{player.efficiency}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h5>{{match.teamBName}}</h5>
+                        <div class="armyAll" ng-repeat="player in match.teamBPlayers">
+                            <div class="armyhd">{{player.playerName}}<span>{{player.isFirst?'(首发)':''}}</span><label>{{player.playerNumber}}</label></div>
+                            <div class="row armybd">
+                                <div class="col">
+                                    <p>
+                                        <span>得分:</span>
+                                        <span>{{player.score}}</span>
+                                    </p>
+                                    <p>
+                                        <span>助攻:</span>
+                                        <span>{{player.assist}}</span>
+                                    </p>
+                                    <p>
+                                        <span>犯规:</span>
+                                        <span>{{player.foul}}</span>
+                                    </p>
+                                    <p>
+                                        <span>二分:</span>
+                                        <span>{{player.twoPointShotHit}}-{{player.twoPointShotHit+player.twoPointShotMiss}}</span>
+                                    </p>
+                                    <p>
+                                        <span>罚球:</span>
+                                        <span>{{player.freeThrowShotHit}}-{{player.freeThrowShotHit+player.freeThrowShotMiss}}</span>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        <span>篮板:</span>
+                                        <span>{{player.backboard}}</span>
+                                    </p>
+                                    <p>
+                                        <span>抢断:</span>
+                                        <span>{{player.steal}}</span>
+                                    </p>
+                                    <p>
+                                        <span>失误:</span>
+                                        <span>{{player.turnover}}</span>
+                                    </p>
+                                    <p>
+                                        <span>三分:</span>
+                                        <span>{{player.threePointShotHit}}-{{player.threePointShotHit+player.threePointShotMiss}}</span>
+                                    </p>
+                                    <p>
+                                        <span>效率:</span>
+                                        <span>32</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--event-->
+                <div class="evntAll" ng-show="!showStatFlag">
+                    <div class="row" ng-repeat="evt in evtList " ng-class="{facted: $index/2}">
+                        <span class="col col-20">{{second2Date(evt.eventTime) | date: 'HH:mm:ss'}}</span>
+                        <span class="col">{{evt.desc}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

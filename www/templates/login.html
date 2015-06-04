@@ -1,0 +1,27 @@
+<ion-modal-view style='background: #f6f6f6;'>
+  <ion-content>
+  <div class="logo">
+            <h3 class="title">赛事统计</h3>          
+          </div>
+   
+
+      <div class="list">
+            <div class="item color6">
+              <label class="item-input change-bd">
+                <span class="input-label">账号：</span>
+                <input type="text" ng-model="loginData.account">
+              </label>
+             <label class="item-input">
+                <span class="input-label">密码：</span>
+                <input type="password" ng-model="loginData.password">
+              </label>
+            </div>
+          </div>
+           <div class="padding">
+              <button class="button  button-full button-blue" ng-click="doLogin()" >登录</button>
+          </div>
+  </ion-content>
+      <div class="waited">
+        <button class="button button-full buttons-default2" ng-click="closeLogin()">稍后登录</button>
+    </div>
+</ion-modal-view>

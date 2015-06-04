@@ -1,0 +1,8 @@
+{
+  "name": "ionic-structure",
+  "app_id": "",
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
