@@ -1,0 +1,13 @@
+<ion-view view-title="球队logo选择">
+  <ion-content>
+  <div class="gameNews">
+         <div class="tm-logo">
+            <div class="col" ng-class="{choosed:selectedId==logo.id}" ng-repeat="logo in logolist" ng-click="select(logo.id)">
+              <a ng-href="javascript:void(0);">
+                 <img src="style/img/teamlogo/team_{{logo.id}}.png">  
+              </a>       
+            </div>
+         </div>
+         </div>
+  </ion-content>
+</ion-view>

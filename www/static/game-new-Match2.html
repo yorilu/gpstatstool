@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="ionic">
+  <head>
+    <script src="../lib/ionic/js/ionic.bundle.js"></script>
+    <meta charset="utf-8">
+    <title>赛事组织-足球-比赛积分2</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="../lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="../style/css/com.css" rel="stylesheet">
+  </head>
+  <body>  
+   <ion-header-bar class="disable-user-behavior bar bar-header bar-matches">
+          <a class="button button-icon icon ion-chevron-left"></a>
+           <h1 class="title">比赛记录</h1>
+          <a class="button correct">纠正比分</a>
+   </ion-header-bar>
+    <ion-content class="sroll-content ionic-sroll has-header">
+     <section class="gameNode">
+        <div class="row scale">
+          <div class="col">
+            <span class="scores">57</span>
+            <div class="score-name"> 
+               <span class="curt-tm">花园坊业余队</span>
+             </div>
+          </div>
+          <div class="col col-10">︰</div>
+          <div class="col">
+            <span class="oppant">94</span>
+            <div class="score-name">
+               <span>虹口梦之队</span>
+            </div>
+          </div>
+        </div>
+         <!--main--> 
+           <div class="playerNum ballNum">
+             <div class="team-lft fl team-human">
+                  <div class="baller select-man">11</div>
+              </div> 
+              <div class="team-lft fr team-human w200">
+               <div class="ballNum_event">
+                  <div class="fl foulShot">
+                     <a href="javascript:" class="scoItm shotted">射门</a>
+                     <a href="javascript:" class="scoItm">传球</a>
+                     <a href="javascript:" class="scoItm">犯规</a>
+                     <a href="javascript:" class="scoItm">点球</a>
+                     <a href="javascript:" class="scoItm">拦截</a>
+                  </div>           
+                  <div class="fr foulShot">
+                     <a href="javascript:" class="scoItm">角球</a>
+                     <a href="javascript:" class="scoItm">乌龙球</a>
+                     <a href="javascript:" class="scoItm">越位</a>
+                     <a href="javascript:" class="scoItm">抢断</a>
+                     <a href="javascript:" class="scoItm">换人</a>
+                  </div>              
+              </div>           
+               <!---->
+             </div>
+           </div>
+      <!--mainEnd--> 
+   </section>  
+            <footer class="bar bar-footer begin-game">    
+              <div class="padding">
+              <div class="sTime">00:00:00</div>
+              <button class="button button-full button-blue">开始比赛</button>
+          </div>
+      </footer>    
+   </ion-content>
+  </body>
+</html>

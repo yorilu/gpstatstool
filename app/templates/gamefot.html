@@ -1,0 +1,88 @@
+<ion-view style="z-index:999;position:absolute;">
+  <ion-content class="sroll-content ionic-sroll" style="top:0;">
+    <div class="bar bar-matches" style="position:static;">
+          <a class="button button-icon icon ion-chevron-left" ng-show="!status" ng-click="backMatchList()"></a>
+          <input class="button correct modify-score" type="text" id='J_Scroller' value="纠正比分">
+    </div>
+    <section class="gameNode">
+      <div class="row scale">
+        <div class="col">
+          <span class="scores">{{leftScore}}</span>
+          <div class="score-name" ng-click="showTeam(1)"> 
+            <span ng-class="{'curt-tm':showLeftTeam}">{{teamData.left.teamName}}</span>
+          </div>
+        </div>
+        <div class="col col-10">︰</div>
+        <div class="col">
+          <span class="oppant">{{rightScore}}</span>
+          <div class="score-name" ng-click="showTeam(0)"> 
+            <span ng-class="{'curt-tm':!showLeftTeam}">{{teamData.right.teamName}}</span>
+          </div>
+        </div>
+      </div>   
+      <!--main--> 
+         <div class="wrapers">
+          <div class="container J_Event">
+            <div class="playerNum ballNum J_E1 relative">
+              <div class="ft-teamer J_Team" ng-show="showLeftTeam">
+                <div class="col-33"  ng-repeat="(k,v) in  teamData.left.member" ng-click="playerClicked($event)"><a class="J_Player" data-left="1" data-leave="{{v.leave}}" ng-show="!v.leave" data-name="{{v.name}}" data-id="{{v.playerId}}" data-no="{{k}}">{{k}}</a></div>
+              </div>
+              <div class="ft-teamer J_Team" ng-show="!showLeftTeam">
+                <div class="col-33" ng-repeat="(k,v) in teamData.right.member" ng-click="playerClicked($event)"><a  class="J_Player" data-left="" data-leave="{{v.leave}}" ng-show="!v.leave"  data-name="{{v.name}}" data-id="{{v.playerId}}" data-no="{{k}}" >{{k}}</a></div>
+              </div>
+            </div> 
+            <!--step2-->
+            <div class="playerNum ballNum J_E2 relative">
+                 <div class="team-lft fl team-human">
+                      <div class="baller select-man" ng-click="cancelFlow()">{{l1PlayerNo}}</div>
+                  </div> 
+                  <div class="team-lft fr team-human w200">
+                   <div class="ballNum_event">
+                      <div class="fl foulShot">
+                        <a class="scoItm" ng-repeat="item in l1LeftMenu" ng-click="step1Clicked($event)" data-event-id="{{item.templateId}}" data-target="{{item.secondEventTarget}}" data-event-name="{{item.templateName}}" data-score="{{item.score}}">{{item.templateName}}</a>
+                      </div>           
+                      <div class="fr foulShot">
+                        <a class="scoItm" ng-repeat="item in l1RightMenu" ng-click="step1Clicked($event)" data-event-id="{{item.templateId}}" data-target="{{item.secondEventTarget}}" data-event-name="{{item.templateName}}" data-score="{{item.score}}">{{item.templateName}}</a>
+                      </div>              
+                  </div>           
+                 </div>
+            </div>
+             <!--step3-->
+            <div class="playerNum ballNum J_E3 relative">
+               <div class="team-lft fl team-human">
+                    <div class="baller select-man" ng-click="cancelFlow()">{{l1PlayerNo}}</div>
+                </div> 
+                <div class="team-lft fr team-human w200"><!---->
+                   <div class="ballNum_event">
+                     <div class="fl foulShot goalBall">
+                     <a href="javascript:" class="scoItm shotted nxtPort">{{l1EventName}}<i class="button button-icon icon ion-chevron-right"></i></a>
+                   </div>           
+                       <div class="fr foulShot goalBall">
+                           <a class="attack" ng-repeat="item in l2Menu" ng-click="step2Clicked($event)" data-event-id="{{item.templateId}}" data-target="{{item.secondEventTarget}}" data-score="{{item.score}}">{{item.templateName}}</a>
+                       </div>
+                    </div>           
+                 <!---->
+               </div>
+            </div>
+          </div>
+        </div>
+          <!--end-->
+        <div class="col cause" ng-show="eventStr">
+          <span class="case">{{eventStr}}</span>
+          <button class="button button-clear" ng-show="!noEventCancel" ng-click="cancelEvent()"><i class="icon ion-reply"></i>撤销</button>
+        </div>
+        <div class="add-player" ng-show="step == 5">
+          <span ng-show="hasNoWaitMember" ng-click="showNormal()">无替补球员</span>
+          <a href="javascript:" class="bench" ng-click="addPlayer();">添加球员</a>
+          <a href="javascript:" class="bench" ng-click="showNormal();">取消</a>
+        </div>
+    <!--mainEnd--> 
+     </section> 
+     <footer class="bar bar-footer begin-game">    
+            <div class="padding">
+            <div class="sTime J_Timer">00:00:00</div>
+            <button class="button button-full button-blue" ng-click="toggleTimer()">{{timerStr}}</button>
+         </div>
+     </footer> 
+  </ion-content>
+</ion-view>

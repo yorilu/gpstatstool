@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html ng-app="ionic">
+  <head>
+     <script src="../lib/ionic/js/ionic.bundle.js"></script>
+    <meta charset="utf-8">
+    <title>赛事列表</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="../lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="../style/css/com.css" rel="stylesheet">
+  </head>
+  <body>
+  <ion-header-bar class="disable-user-behavior bar bar-header bar-ava">         
+          <a class="button cancel">注销</a>          
+          <h3 class="title">赛事列表</h3> 
+            <div class="button ft-title">
+              <a class="button button-icon icon ion-loop"></a>
+              <a class="button button-icon icon ion-plus-round"></a>
+            </div>
+   </ion-header-bar>
+  <ion-content class="sroll-content ionic-sroll">
+    <a href="javascript:" class="unLoading">您本地还有3场赛事数据未提交，请尽快处理！</a>
+     <a href="javascript:" class="unLoading">网络不可用，请检查手机网络！</a>
+      <div class="race-List">
+        <p class="dateTd">今天</p>
+            <div class="row matchMain">
+              <div class="col col-33">
+                <img src="../style/img/teamlogo/team_1.png"/>
+                <p>虹口足球队</p>
+              </div>
+              <div class="col">
+                <h5>篮球</h5>
+                <div class="row ratio">
+                  <div class="col">156</div>
+                  <div class="col col-10">:</div>
+                  <div class="col">103</div>
+                </div>
+                <span>正在比赛</span>
+              </div>
+              <div class="col col-33">
+                <img src="../style/img/teamlogo/team_2.png"/>
+                <p>虹口足球队</p>
+              </div>
+            </div>
+          <!--end-->
+           <div class="row matchMain endMain">
+              <div class="col col-33">
+                <img src="../style/img/teamlogo/team_3.png"/>
+                <p>虹口足球队</p>
+              </div>
+              <div class="col">
+                <h5>足球</h5>
+                <div class="row ratio">
+                  <div class="col">56</div>
+                  <div class="col col-10">:</div>
+                  <div class="col">93</div>
+                </div>
+                <span>已结束</span>
+              </div>
+              <div class="col col-33">
+                <img src="../style/img/teamlogo/team_4.png"/>
+                <p>虹口足球队</p>
+              </div>
+            </div>
+             <!--data-unload-->
+            <div class="row matchMain Undata">
+              <div class="col col-33">
+                <img src="../style/img/teamlogo/team_5.png"/>
+                <p>虹口足球队</p>
+              </div>
+              <div class="col">
+                <h5>足球</h5>
+                <div class="row ratio">
+                  <div class="col">56</div>
+                  <div class="col col-10">:</div>
+                  <div class="col">93</div>
+                </div>
+                <span class="state">已结束</span>
+                <span class="state">数据未上传</span>
+              </div>
+              <div class="col col-33">
+                <img src="../style/img/teamlogo/team_6.png"/>
+                <p>虹口足球队</p>
+              </div>
+            </div>
+      </div>
+      <!--tomorrow-->
+      <div class="race-List">
+        <p class="dateTd">明天</p>
+            <div class="row matchMain unStart">
+              <div class="col col-33">
+                <img src="../style/img/teamlogo/team_7.png"/>
+                <p>虹口足球队</p>
+              </div>
+              <div class="col">
+                <h5>足球</h5>
+                <div class="row ratio">
+                  <div class="col"><i class="icon ion-clock"></i>11:00</div>
+                </div>
+                <span>未开始</span>
+              </div>
+              <div class="col col-33">
+                <img src="../style/img/teamlogo/team_8.png"/>
+                <p>虹口足球队</p>
+              </div>
+            </div>
+          <!--end-->
+      </div>
+  </ion-content>
+  </body>
+</html>

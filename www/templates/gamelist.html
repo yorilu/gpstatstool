@@ -1,0 +1,53 @@
+<ion-view view-title="赛事列表" hide-back-button="true">
+    <ion-nav-buttons side="left">
+        <a href="javascript:void(0);" class="button cancel" ng-click="logout()">注销</a>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a href="javascript:void(0);" class="button button-icon icon ion-loop" ng-click='cloudSync()'></a>
+        <a href="javascript:void(0);" class="button button-icon icon ion-plus-round" ng-click='showActionSheet()'></a>
+    </ion-nav-buttons>
+    <ion-content class="hd-white">
+        <ion-list>
+            <a ng-show="msg" ng-click="showUploadMatch()";
+               href="javascript:" class="unLoading">{{msg}}</a>
+            <div class="race-List" ng-repeat="(key,matchs) in curMatchData ">
+                <p class="dateTitle">{{transDate(key)}}</p>
+                <div class="row matchMain" ng-repeat="match in matchs track by match.id"
+                     ng-click="goNextPage('{{match.id}}')" ng-class="{endMain:match.status == 2,unStart:match.status ==0}">
+                    <div class="col col-33">
+                        <img ng-src="{{match.homeLogoUrl?match.homeLogoUrl:('style/img/teamlogo/team_'+match.homeLogo+'.png')}}"/>
+                        <p>{{match.homeTeam}}</p>
+                    </div>
+                    <div class="col">
+                        <h5>{{transSportType(match.sportType)}}</h5>
+                        <div class="row ratio" ng-show="match.status!=0">
+                            <div class="col">{{match.teamAScore}}</div>
+                            <div class="col col-10">:</div>
+                            <div class="col">{{match.teamBScore}}</div>
+                        </div>
+                        <div class="row ratio" ng-show="match.status ==0">
+                            <div class="col" ><i class="icon ion-clock"></i>{{match.startTime.substr(11,5)}}</div>
+                        </div>
+                        <span>{{convertStatus(match.status)}}</span>
+                        <span class="state">{{convertUploadFlag(match.status,match.uploadFlag)}}</span>
+                    </div>
+                    <div class="col col-33">
+                        <img ng-src="{{match.guestLogoUrl?match.guestLogoUrl:('style/img/teamlogo/team_'+match.guestLogo+'.png')}}"/>
+                        <p>{{match.guestTeam}}</p>
+                    </div>
+                </div>
+            </div>
+        </ion-list>
+
+        <ion-refresher pulling-text="数据加载中..."
+            on-refresh="loadLastMatchList()">
+        </ion-refresher>
+
+        <ion-infinite-scroll
+                immediate-check = "fasle"
+                ng-if="moreDataCanBeLoaded()"
+                on-infinite="loadFutureMatchList()"
+                distance="2%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

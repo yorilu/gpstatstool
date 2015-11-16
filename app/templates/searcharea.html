@@ -1,0 +1,20 @@
+<ion-view view-title="选择场馆">
+  <ion-content>
+     <div class="firstMain">
+                <div class="search">
+                    <div class="item-bd">
+                      <input type="search"  ng-keyup="$event.keyCode == 13 ? search() : null"  placeholder="请输入场馆名称" ng-model="searchData.keyword">
+                      <a ng-href="javascript:void(0);" class="clickBtn" ng-click="search()" ><i class="icon ion-search placeholder-icon" ></i></a>
+                    </div>
+                </div>
+              <div class="findy" >
+                <a href="javascript:void(0);" class="endNum" >搜索到{{data.length}}条信息</a>
+                    <ul class="list">
+                        <li class="item item-checkbox item-checkbox-right" ng-repeat="d in data" ng-click="select(d)">
+                            {{d.name}}
+                        </li>
+                    </ul>
+              </div>           
+        </div>
+  </ion-content>
+</ion-view>

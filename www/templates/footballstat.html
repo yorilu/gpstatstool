@@ -1,0 +1,44 @@
+
+<ion-view view-title="数据统计">
+    <ion-content class="sroll-content ionic-sroll has-header">
+        <div class="bar-ava">
+            <div class="row scale">
+                <div class="col">
+                    <span class="scores">{{gameInfo.teamAScore}}</span>
+                    <span class="score-name">{{gameInfo.teamAName}}</span>
+                </div>
+                <div class="col col-10">:</div>
+                <div class="col">
+                    <span class="oppant">{{gameInfo.teamBScore}}</span>
+                    <span class="score-name">{{gameInfo.teamBName}}</span>
+                </div>
+            </div>
+        </div>
+
+        <!--数据开始-->
+        <div>
+          <div class="row headtum" ng-click="toggleTab($event)">
+            <div class="col"><a id="stat" href="javascript:" ng-class="{dataHd:showStatFlag}">统计</a></div>
+                <div class="col"><a id="event" href="javascript:" ng-class="{dataHd:!showStatFlag}">事件</a></div>
+          </div>
+          <div class="queue">
+            <!--data-->
+           <div class="ft-group" ng-if="showStatFlag">
+                  <div class="row" ng-repeat="stats in statsList">
+                    <div class="col col-33">{{stats.teamAEventsCount}}</div>
+                    <div class="col col-33">{{stats.eventName}}</div>
+                    <div class="col col-33">{{stats.teamBEventsCount}}</div>
+                  </div>
+          </div>
+
+          <!--event-->
+           <div class="evntAll" ng-if="!showStatFlag">
+            <div class="row" ng-repeat="evt in eventList " ng-class="{facted: $index%2}">
+                  <span class="col col-20">{{second2Date(evt.eventTime) | date: 'HH:mm:ss'}}</span>
+                  <span class="col">{{evt.description+'('+evt.teamScore+')'}}</span>
+            </div>
+          </div> 
+          </div>
+        </div>
+    </ion-content>
+</ion-view>

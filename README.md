@@ -8,11 +8,18 @@
 5. npm install
 6. bower install
 
+##安装平台
+
+1. ionic platform android 
+2. ionic platform ios
+
 ##pulgin install
-1. cordova plugin add cordova-plugin-geolocation
-2. cordova plugin add cordova-plugin-network-information
-3. cordova plugin add cordova-plugin-whitelist
-4. cordova plugin add cordova-sqlite-storage
+1. ionic plugin add cordova-plugin-geolocation
+2. ionic plugin add cordova-plugin-network-information
+3. ionic plugin add cordova-plugin-whitelist
+4. ionic plugin add cordova-sqlite-storage
+5. ionic plugin add com.ionic.keyboard
+6. ionic plugin add cordova-plugin-statusbar
 
 ##ionic 命令
 具体参考：http://www.ionicframework.com/getting-started/
